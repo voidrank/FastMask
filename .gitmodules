@@ -1,0 +1,7 @@
+[submodule "caffe-fm"]
+	path = caffe-fm
+	url = ./caffe-fm
+
+[submodule "alchemy"]
+	path = alchemy
+	url = ./alchemy

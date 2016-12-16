@@ -17,17 +17,22 @@ Hexiang Hu\*, Shiyi Lan\*, Yuning Jiang, Zhimin Cao, Fei Sha
 
 ## Step in common
 
+We highly recommend you to use [anaconda2](https://www.continuum.io/downloads) on ubuntu 14.04,
+which is our main experimental environment.
 
 For ubuntu 14.04
 ```
-sudo apt-get install python-opencv
+sudo apt-get update
+sudo apt-get install python-opencv python-pip
 ```
+
+and then install cocoapi see [COCOApi](https://github.com/pdollar/coco)
 
 ```
 git clone --recursive https://github.com/voidrank/FastMask
 cd FastMask
 mkdir params results
-pip install requirements.txt
+pip install -r requirements.txt
 cd caffe-fm
 make pycaffe -j 4
 cd ..
@@ -73,3 +78,17 @@ nohup redis-server redis.conf
 ```
 python train.py [gpu_id] [model] [--init_weights=ResNet-50-model.caffemodel] [--process=4]
 ```
+
+
+## Evaluation
+
+```
+python test.py [gpu_id] [model] [--init_weights=xxx.caffemodel]
+```
+```
+python evalCOCO.py [model]
+```
+
+## Precomputed Proposals
+
+(here comes the download link of precomputed proposals)
