@@ -1,7 +1,7 @@
 [submodule "caffe-fm"]
 	path = caffe-fm
-	url = ./caffe-fm
+	url = https://github.com/voidrank/caffe-fm
 
 [submodule "alchemy"]
 	path = alchemy
-	url = ./alchemy
+	url = https://github.com/voidrank/alchemy
