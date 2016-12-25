@@ -3,13 +3,14 @@
 FastMask: Segment Multi-scale Object Candidates in One Shot
 
 Hexiang Hu\*, Shiyi Lan\*, Yuning Jiang, Zhimin Cao, Fei Sha  
-(\*Equal contribution. Work was done when Hexiang Hu was interns at Megvii)
+(\*Equal contribution. Work was done during their internships at Megvii Inc.)
 
 (Here comes the information for citation)
 
 # Requirements and Dependencies
 - MAC OS X or Linux
 - NVIDIA GPU with compute capability 3.5+
+- Python 2.7+
 - [COCOApi](https://github.com/pdollar/coco), redis, python-cjson, opencv2, numpy
 - [Alchemy](https://github.com/voidrank/alchemy), [caffe-fm](https://github.com/voidrank/caffe-fm)
 
@@ -42,7 +43,7 @@ cd ..
 
 ### Download parameters of pretrained models
 
-(here comes the download link of pretrained model)
+Download [final model](https://drive.google.com/file/d/0B91BSyN61NHRS3Y3UEl1LVE5MjQ/view?usp=sharing) and save it in ./params
 
 ### Image Demo
 ```
@@ -70,13 +71,29 @@ python video_demo.py [gpu_id] [model] [input_video_path] [output_video_path] [--
 nohup redis-server redis.conf
 ```
 
+### Download COCO
+
+```
+cd data
+wget http://msvocds.blob.core.windows.net/coco2014/train2014.zip http://msvocds.blob.core.windows.net/annotations-1-0-3/instances_train-val2014.zip http://msvocds.blob.core.windows.net/coco2014/val2014.zip
+unzip train.zip instances_train_val2014.zip val2014.zip
+cd ..
+```
+
+
 ### Download pretrained model on imagenet
 
-(here comes the download link of pretrained model)
+Download [ResNet-50-model.caffemodel](https://onedrive.live.com/?authkey=%21AAFW2-FVoxeVRck&id=4006CBB8476FF777%2117887&cid=4006CBB8476FF777) and save it in ./params
 
 ### Training
 ```
 python train.py [gpu_id] [model] [--init_weights=ResNet-50-model.caffemodel] [--process=4]
+```
+
+For examples,
+
+```
+python train.py 0 fm-res39 --init_weights=ResNet-50-model.caffemodel
 ```
 
 
@@ -88,7 +105,3 @@ python test.py [gpu_id] [model] [--init_weights=xxx.caffemodel]
 ```
 python evalCOCO.py [model]
 ```
-
-## Precomputed Proposals
-
-(here comes the download link of precomputed proposals)
