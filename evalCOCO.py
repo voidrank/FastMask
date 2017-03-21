@@ -35,8 +35,8 @@ import cv2
 def parse_args():
     parser = argparse.ArgumentParser('train net')
     parser.add_argument('model', type=str)
-    parser.add_argument('--useCats', dest='useCats', type=str, default='True')
-    parser.add_argument('--useSegm', dest='useSegm', type=str, default='False')
+    parser.add_argument('--useCats', dest='useCats', type=str, default='False')
+    parser.add_argument('--useSegm', dest='useSegm', type=str, default='True')
     parser.add_argument('--end', dest='end', type=int, default=5000)
     parser.add_argument('--debug', dest='debug', type=str, default='False')
     parser.add_argument('--nms_threshold', dest='nms_threshold', type=float, default=.7)
