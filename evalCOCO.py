@@ -39,10 +39,10 @@ def parse_args():
     parser.add_argument('--useSegm', dest='useSegm', type=str, default='True')
     parser.add_argument('--end', dest='end', type=int, default=5000)
     parser.add_argument('--debug', dest='debug', type=str, default='False')
-    parser.add_argument('--nms_threshold', dest='nms_threshold', type=float, default=.7)
+    parser.add_argument('--nms_threshold', dest='nms_threshold', type=float, default=1)
     parser.add_argument('--dataset', dest='dataset', type=str, default='val2014')
     parser.add_argument('--objn_threshold', dest='objn_threshold', type=float, default=0)
-    parser.add_argument('--max_proposal', dest='max_proposal', type=int, default=100)
+    parser.add_argument('--max_proposal', dest='max_proposal', type=int, default=1000)
 
     args = parser.parse_args()
     args.useSegm = args.useSegm == 'True'
