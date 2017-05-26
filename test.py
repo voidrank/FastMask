@@ -100,7 +100,7 @@ if __name__ == '__main__':
         # gen mask
         ret = gen_masks(net, img, config, 
                 dest_shape=(spider.origin_height, spider.origin_width), 
-                useCats=args.useCats, vis=args.debug)
+                image=args.debug)
 
         if args.useCats:
             ret_masks, ret_scores, ret_cats = ret
