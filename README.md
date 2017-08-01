@@ -2,9 +2,9 @@
 
 [FastMask: Segment Multi-scale Object Candidates in One Shot](https://arxiv.org/abs/1612.08843)
 
-*(To appear as a spotlight paper at CVPR 2017 in Honolulu, Hawaii)*
+*(Published as a spotlight paper at CVPR 2017 in Honolulu, Hawaii)*
 
-[Hexiang Hu\*](http://hexianghu.com), Shiyi Lan\*, Yuning Jiang, Zhimin Cao, Fei Sha
+[Hexiang Hu\*](http://hexianghu.com), [Shiyi Lan\*](https://voidrank.github.io), Yuning Jiang, Zhimin Cao, Fei Sha
 (\*Equal contribution. Work was done during their internships at Megvii Inc.)
 
  If you are using code or other related resources from this repository, please cite the following paper:
